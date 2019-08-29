@@ -1,0 +1,11 @@
+.page-header{
+   margin: 0px;
+   padding: 0px;
+   font-size: 30px;
+   font-style: italic;
+}
+.logout{
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}

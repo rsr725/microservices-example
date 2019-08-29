@@ -1,0 +1,6 @@
+{
+  "/gtc2/*": {
+    "target": "http://localhost:8080/gtc",
+    "secure": false
+  }
+}

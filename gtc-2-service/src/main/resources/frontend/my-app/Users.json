@@ -1,0 +1,36 @@
+{
+'dl':[
+{
+'ein':223344551,
+'name': 'Harry',
+'password': 'admin123'
+},
+{
+'ein':223344552,
+'name': 'Jack',
+'password': 'admin123'
+},
+{
+'ein':223344553,
+'name': 'Thomas',
+'password': 'admin123'
+}
+]
+'con':[
+{
+'emial':george@virtusa.com,
+'name': 'George',
+'password': 'admin123'
+},
+{
+'emial':jacob@virtusa.com,
+'name': 'Jacob',
+'password': 'admin123'
+},
+{
+'emial':noah@virtusa.com,
+'name': 'Noah',
+'password': 'admin123'
+}
+]
+}

@@ -1,0 +1,80 @@
+<div class="container">
+    <form [formGroup]="testResultForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-4">
+                <div>
+                    <label for="ein">EIN</label>
+                    <input type="text" formControlName="ein" placeholder="Enter EIN" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ein.errors }" />
+                </div>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" formControlName="name" placeholder="Enter Name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                </div>
+                <div>
+                    <label for="deviceId">Device Id</label>
+                    <input type="text" formControlName="deviceId" placeholder="Enter Device ID" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.deviceId.errors }"
+                    />
+                </div>
+                <div>
+                    <label for="fromDate">From Date</label>
+                    <input type="date" formControlName="fromDate" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.fromDate.errors }"
+                    />
+                </div>
+                <div>
+                    <label for="toDate">To Date</label>
+                    <input type="date" formControlName="toDate" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.toDate.errors }"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <button [disabled]="loading" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="">
+        <table class="table table-bordered">
+                <thead>
+                  <tr class="info">
+                    <th>S.No.</th>
+                    <!-- <th>ID</th> -->
+                    <th>Device ID</th>
+                    <th>Headend ID</th>
+                    <th>Port</th>
+                    <th>Job Type</th>
+                    <!-- <th>Request Type</th> -->
+                    <th>EIN</th>
+                    
+                    <th>EMS Code</th>
+                    <!-- <th>Toggle Code</th> -->
+                    <th>Test ID</th>
+                    <!-- <th>Created Time</th> -->
+                    <th>Modified Time</th>
+                    <th>Operation</th>
+                    <th>Outcome</th>
+                    <th>Friendly MSG</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let result of testResults let i = index">
+                    <td >{{i}}</td>
+                    <td>{{result.deviceId}}</td>
+                   
+                    <td>{{result.headendId}}</td>
+                    <td>{{result.port}}</td>
+                    <td>{{result.jobType}}</td>
+                    <td>{{result.ein}}</td>
+                    <td>{{result.emsCode}}</td>
+                    <td>{{result.testId}}</td>
+                    <td>{{result.modifiedTime}}</td>
+                    <td>{{result.operation}}</td>
+                    <td>{{result.outcome}}</td>
+                    <td>{{result.friendlyMsg}}</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+</div>
