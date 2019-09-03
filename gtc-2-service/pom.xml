@@ -44,7 +44,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
+		 <dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
@@ -75,42 +75,6 @@
 
 	<build>
 		<plugins>
-		<!-- <plugin>
-	<groupId>org.codehaus.mojo</groupId>
-	<artifactId>exec-maven-plugin</artifactId>
-	<executions>
-		<execution> 
-			<phase>validate</phase>
-			<goals>
-				<goal>exec</goal>
-			</goals>
-		</execution>
-	</executions>
-	<configuration>
-		<executable>ng</executable>
-		<workingDirectory>src/main/resources/frontend/my-app</workingDirectory>
-		<arguments>
-			<argument>build</argument>
-		</arguments>
-	</configuration>
-</plugin> -->
-<plugin> 
-        <artifactId>maven-resources-plugin</artifactId>     
-    <executions>  
-               <execution>   
-                       <id>copy-resources</id>    
-                      <phase>validate</phase> 
-                         <goals><goal>copy-resources</goal></goals>             
-             <configuration>                                 
-  <outputDirectory>${build.directory}/classes/static/</outputDirectory >      
-                             <resources>    
-                                         <resource>       
-                                              <directory>src/main/resources/frontend/my-app</directory> 
-                                            </resource>   
-                                 </resources>   
-                        </configuration>        
-          </execution>   
-       </executions> </plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

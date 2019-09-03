@@ -35,12 +35,12 @@ public class TaddsLogController {
 	
 	@PostMapping("/tadds/logs/get-by-deviceid-cr-md")
 	public List<TaddsLog> findByDeviceIdCreatedTimeModifiedTime(@RequestBody TaddsLog taddsLog) {
-		return taddsLogRepository.findByDeviceIdAndCreatedTimeAndModifiedTime(taddsLog.getDeviceId(), taddsLog.getCreatedTime(), taddsLog.getModifiedTime());
+		return taddsLogRepository.findByDeviceIdAndCreatedTimeAndModifiedTimeAndTestType(taddsLog.getDeviceId(), taddsLog.getCreatedTime(), taddsLog.getModifiedTime());
 	}
 	
 	@PostMapping("/tadds/logs/get-by-cr-md")
 	public List<TaddsLog> findByCreatedTimeModifiedTime(@RequestBody TaddsLog taddsLog) {
-		return taddsLogRepository.findByCreatedTimeAndModifiedTime(taddsLog.getCreatedTime(), taddsLog.getModifiedTime());
+		return taddsLogRepository.findByCreatedTimeAndModifiedTimeAndTestType(taddsLog.getCreatedTime(), taddsLog.getModifiedTime());
 	}
 	
 	@PostMapping("/tadds/logs/save")

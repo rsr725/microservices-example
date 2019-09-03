@@ -6,6 +6,8 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class TaddsLog {
@@ -22,7 +24,9 @@ public class TaddsLog {
 	private String emsCode;
 	private String toggleCode;
 	private String testId;
+	@Temporal(TemporalType.DATE)
 	private Date createdTime;
+	@Temporal(TemporalType.DATE)
 	private Date modifiedTime;
 	private Timestamp startTime;
 	private Timestamp endTime;
