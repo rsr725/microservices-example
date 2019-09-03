@@ -6,7 +6,7 @@ import java.util.Map;
 public class GTCCommonConstant {
 	public static final String EMS_TOGGLE_CODE_GTC_TOGGLE_0000 = "GTC_TOGGLE_0000";
 	public static final String EMS_TOGGLE_CODE_GTC_TOGGLE_0001 = "GTC_TOGGLE_0001";
-	public static final String EMS_TOGGLE_CODE_GTC_TOGGLE_0002 = "GTC_TOGGLE_0002";
+	public static final String EMS_TOGGLE_CODE_GTC_TOGGLE_9000 = "GTC_TOGGLE_9000";
 	public static final String EMS_TOGGLE_CODE_GTC_TOGGLE_0003 = "GTC_TOGGLE_0003";
 	public static final String EMS_TOGGLE_CODE_GTC_TOGGLE_0004 = "GTC_TOGGLE_0004";
 	public static final String EMS_TOGGLE_CODE_GTC_TOGGLE_0005 = "GTC_TOGGLE_0005";
@@ -14,7 +14,7 @@ public class GTCCommonConstant {
 	
 	public static final String EMS_TOGGLE_CODE_GTC_TOGGLE_0000_MSG = "Toggle switch fibre light on. Caution.";
 	public static final String EMS_TOGGLE_CODE_GTC_TOGGLE_0001_MSG = "Toggle switch fibre light off.";
-	public static final String EMS_TOGGLE_CODE_GTC_TOGGLE_0002_MSG = "Test unsuccessful - Toggle switch on could not be applied successfully.";
+	public static final String EMS_TOGGLE_CODE_GTC_TOGGLE_9000_MSG = "Test unsuccessful - DON'T CALL THE HELPDESK - Please re-try once more. If second test fails record failure in your job before closing your task.";
 	public static final String EMS_TOGGLE_CODE_GTC_TOGGLE_0003_MSG = "Test unsuccessful - Toggle switch off could not be applied successfully.";
 	public static final String EMS_TOGGLE_CODE_GTC_TOGGLE_0004_MSG = "Toggle status fibre light on. Caution.";
 	public static final String EMS_TOGGLE_CODE_GTC_TOGGLE_0005_MSG = "Toggle status fibre light off.";
@@ -31,7 +31,7 @@ public class GTCCommonConstant {
 		
 		EMS_TOGGLE_CODE_AND_MSG.put(EMS_TOGGLE_CODE_GTC_TOGGLE_0000, EMS_TOGGLE_CODE_GTC_TOGGLE_0000_MSG);
 		EMS_TOGGLE_CODE_AND_MSG.put(EMS_TOGGLE_CODE_GTC_TOGGLE_0001, EMS_TOGGLE_CODE_GTC_TOGGLE_0001_MSG);
-		EMS_TOGGLE_CODE_AND_MSG.put(EMS_TOGGLE_CODE_GTC_TOGGLE_0002, EMS_TOGGLE_CODE_GTC_TOGGLE_0002_MSG);
+		EMS_TOGGLE_CODE_AND_MSG.put(EMS_TOGGLE_CODE_GTC_TOGGLE_9000, EMS_TOGGLE_CODE_GTC_TOGGLE_9000_MSG);
 		EMS_TOGGLE_CODE_AND_MSG.put(EMS_TOGGLE_CODE_GTC_TOGGLE_0003, EMS_TOGGLE_CODE_GTC_TOGGLE_0003_MSG);
 		EMS_TOGGLE_CODE_AND_MSG.put(EMS_TOGGLE_CODE_GTC_TOGGLE_0004, EMS_TOGGLE_CODE_GTC_TOGGLE_0004_MSG);
 		EMS_TOGGLE_CODE_AND_MSG.put(EMS_TOGGLE_CODE_GTC_TOGGLE_0005, EMS_TOGGLE_CODE_GTC_TOGGLE_0005_MSG);

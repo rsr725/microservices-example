@@ -21,7 +21,7 @@ import com.virtusa.poc.gtc2service.bean.GTCTaddsLog;
 
 import feign.RetryableException;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RestController
 public class GTC2Controller {
 	
@@ -97,12 +97,12 @@ public class GTC2Controller {
 	
 	@PostMapping("/gtc2/get-log-by-deviceid-cr-md")
 	public List<GTCTaddsLog> getLogByDeviceIdCrTimeMdTime(@RequestBody GTCTaddsLog gtcTaddsLog) {
-		return updateFriendlyMsgforToggleCode(taddsProxy.findByDeviceIdCreatedTimeModifiedTime(gtcTaddsLog));
+		return updateFriendlyMsgforToggleCode(taddsProxy.findByDeviceIdAndCreatedTimeAndModifiedTimeAndTestType(gtcTaddsLog));
 	}
 	
 	@PostMapping("/gtc2/get-log-by-cr-md")
 	public List<GTCTaddsLog> getLogByCrTimeMdTime(@RequestBody GTCTaddsLog gtcTaddsLog) {
-		return updateFriendlyMsgforToggleCode(taddsProxy.findByCreatedTimeModifiedTime(gtcTaddsLog));
+		return updateFriendlyMsgforToggleCode(taddsProxy.findByCreatedTimeAndModifiedTimeAndTestType(gtcTaddsLog));
 	}
 	
 	private static List<GTCTaddsLog> updateFriendlyMsgforToggleCode(List<GTCTaddsLog> list) {

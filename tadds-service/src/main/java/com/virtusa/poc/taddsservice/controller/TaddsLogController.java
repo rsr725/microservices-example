@@ -30,17 +30,17 @@ public class TaddsLogController {
 	
 	@PostMapping("/tadds/logs/get-by-deviceid")
 	public List<TaddsLog> findByDeviceId(@RequestBody TaddsLog taddsLog) {
-		return taddsLogRepository.findByDeviceId(taddsLog.getDeviceId());
+		return taddsLogRepository.findByDeviceId(taddsLog.getDeviceId(), taddsLog.getTestType());
 	}
 	
 	@PostMapping("/tadds/logs/get-by-deviceid-cr-md")
 	public List<TaddsLog> findByDeviceIdCreatedTimeModifiedTime(@RequestBody TaddsLog taddsLog) {
-		return taddsLogRepository.findByDeviceIdAndCreatedTimeAndModifiedTimeAndTestType(taddsLog.getDeviceId(), taddsLog.getCreatedTime(), taddsLog.getModifiedTime());
+		return taddsLogRepository.findByDeviceIdAndCreatedTimeAndModifiedTimeAndTestType(taddsLog.getDeviceId(), taddsLog.getCreatedTime(), taddsLog.getModifiedTime(), taddsLog.getTestType());
 	}
 	
 	@PostMapping("/tadds/logs/get-by-cr-md")
 	public List<TaddsLog> findByCreatedTimeModifiedTime(@RequestBody TaddsLog taddsLog) {
-		return taddsLogRepository.findByCreatedTimeAndModifiedTimeAndTestType(taddsLog.getCreatedTime(), taddsLog.getModifiedTime());
+		return taddsLogRepository.findByCreatedTimeAndModifiedTimeAndTestType(taddsLog.getCreatedTime(), taddsLog.getModifiedTime(), taddsLog.getTestType());
 	}
 	
 	@PostMapping("/tadds/logs/save")

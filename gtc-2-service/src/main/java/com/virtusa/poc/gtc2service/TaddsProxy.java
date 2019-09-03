@@ -24,8 +24,8 @@ public interface TaddsProxy {
 	public List<GTCTaddsLog> findByDeviceId(@RequestBody GTCTaddsLog gtcTaddsLog);
 	
 	@PostMapping("/tadds/logs/get-by-deviceid-cr-md")
-	public List<GTCTaddsLog> findByDeviceIdCreatedTimeModifiedTime(@RequestBody GTCTaddsLog gtcTaddsLog);
+	public List<GTCTaddsLog> findByDeviceIdAndCreatedTimeAndModifiedTimeAndTestType(@RequestBody GTCTaddsLog gtcTaddsLog);
 	
 	@PostMapping("/tadds/logs/get-by-cr-md")
-	public List<GTCTaddsLog> findByCreatedTimeModifiedTime(@RequestBody GTCTaddsLog gtcTaddsLog);
+	public List<GTCTaddsLog> findByCreatedTimeAndModifiedTimeAndTestType(@RequestBody GTCTaddsLog gtcTaddsLog);
 }
