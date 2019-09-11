@@ -1,15 +1,17 @@
 package com.virtusa.poc.emsservice.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.virtusa.poc.emsservice.bean.EMSToggle;
-import com.virtusa.poc.emsservice.bean.EMSToggleConstant;
 import com.virtusa.poc.emsservice.repository.EMSToggleRepository;
 
 @RestController
@@ -26,21 +28,27 @@ public class EMSToggleController {
 	}
 	
 	@PostMapping("/ems/get-toggle-status")
-	public EMSToggle getEMSToggleStatus(@RequestBody EMSToggle emsToggle) {
-		EMSToggle ems = new EMSToggle();
+	public ResponseEntity<EMSToggle> getEMSToggleStatus(@RequestBody EMSToggle emsToggle) {
+		Optional<EMSToggle> ems = null;
 		if(emsToggle != null) {
 			ems = emsToggleRepository.findByemsIdAndHeadendIdAndEmsHeadendPort(emsToggle.getEmsId(), emsToggle.getHeadendId(), emsToggle.getEmsHeadendPort());
 		}
-		return ems; 
+		ResponseEntity<EMSToggle> entity = null;
+		EMSToggle emsToggleDt = new EMSToggle();
+		if(!ems.isPresent()) {
+			entity = ResponseEntity.status(HttpStatus.NOT_FOUND).body(emsToggleDt);
+		}else {
+			entity = ResponseEntity.ok(ems.get());
+		}
+		return entity; 
 	}
 	
 	@PostMapping("/ems/set-toggle-status")
-	public EMSToggle setToggleStatus(@RequestBody EMSToggle emsToggle) {
+	public ResponseEntity<EMSToggle> setToggleStatus(@RequestBody EMSToggle emsToggle) {
 		EMSToggle ems = new EMSToggle();
 		if(emsToggle != null) { 
-			emsToggle.setToggleCode(EMSToggleConstant.EMS_TOGGLE_STATUS.get(EMSToggleConstant.EMS_TOGGLE_STATUS_ON.equalsIgnoreCase(emsToggle.getStatus()) ? EMSToggleConstant.EMS_TOGGLE_STATUS_ON : EMSToggleConstant.EMS_TOGGLE_STATUS_OFF.equalsIgnoreCase(emsToggle.getStatus()) ? EMSToggleConstant.EMS_TOGGLE_STATUS_OFF : EMSToggleConstant.EMS_TOGGLE_STATUS_ON));
 			ems = emsToggleRepository.save(emsToggle);
 		}
-		return ems; 
+		return ResponseEntity.ok(ems);
 	}
 }

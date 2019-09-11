@@ -15,7 +15,6 @@ public class EMSToggle {
 	private String headendId;
 	private String emsHeadendPort;
 	private String description;
-	private String toggleCode;
 	private String status;
 	private Date modifiedTime;
 	@Transient
@@ -26,14 +25,13 @@ public class EMSToggle {
 	}
 
 	public EMSToggle(long id, String emsId, String headendId, String emsHeadendPort, String description,
-			String toggleCode, String status, Date modifiedTime) {
+			String status, Date modifiedTime) {
 		super();
 		this.id = id;
 		this.emsId = emsId;
 		this.headendId = headendId;
 		this.emsHeadendPort = emsHeadendPort;
 		this.description = description;
-		this.toggleCode = toggleCode;
 		this.status = status;
 		this.modifiedTime = modifiedTime;
 	}
@@ -78,14 +76,6 @@ public class EMSToggle {
 		this.description = description;
 	}
 
-	public String getToggleCode() {
-		return toggleCode;
-	}
-
-	public void setToggleCode(String toggleCode) {
-		this.toggleCode = toggleCode;
-	}
-
 	public String getStatus() {
 		return status;
 	}
@@ -113,7 +103,7 @@ public class EMSToggle {
 	@Override
 	public String toString() {
 		return "EMSToggle [id=" + id + ", emsId=" + emsId + ", headendId=" + headendId + ", emsHeadendPort="
-				+ emsHeadendPort + ", description=" + description + ", toggleCode=" + toggleCode + ", status=" + status
+				+ emsHeadendPort + ", description=" + description + ", status=" + status
 				+ ", modifiedTime=" + modifiedTime + "]";
 	}
 	
