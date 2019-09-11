@@ -41,7 +41,17 @@ public class GTCCommonConstant {
 	static {
 		EMS_TOGGLE_STATUS.put(EMS_TOGGLE_STATUS_ON, EMS_TOGGLE_CODE_GTC_TOGGLE_0000);
 		EMS_TOGGLE_STATUS.put(EMS_TOGGLE_STATUS_OFF, EMS_TOGGLE_CODE_GTC_TOGGLE_0001);
+		EMS_TOGGLE_STATUS.put("", EMS_TOGGLE_CODE_GTC_TOGGLE_9000);
 	}
 	
+	public static final String PHOENIX_ERROR_FRIENDLY_MSG = "Phoenix Service is down. Please try again later!";
+	public static final String PHOENIX_NOT_FOUND_FRIENDLY_MSG = "EMS details not found in inventory. Please provide correct details!";
 	
+	public static final String EMS_ERROR_FRIENDLY_MSG = "EMS Service is down. Please try again later!";
+	public static final String EMS_NOT_FOUND_FRIENDLY_MSG = "EMS details not found. Please provide correct details!";
+	
+	public static final String TADDS_ERROR_FRIENDLY_MSG = "TADDS Service is down. Please try again later!";
+	public static final String TADDS_NOT_FOUND_FRIENDLY_MSG = "TADDS records not found. Please provide correct details!";
+	
+	public static final int NOT_FOUND = 404;
 }
