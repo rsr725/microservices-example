@@ -1,9 +1,9 @@
 INSERT INTO PHOENIX_INVENTORY(ID,DEVICE_ID,EMS_HEADEND_PORT,EMS_ID,FQDN_URL,HEADEND_DETAILS,HEADEND_ID,PORT,SERVICE_STATUS,VENDOR,EMS_TYPE )
-	VALUES(1,'TMAWXBT','/shelf=1/slot=11/port=11','EMS_121','','Headend Details','BAAGIO','/slot=11/port=11','ON','Huawei','HiM U2000 X86'),
-	(2,'TMBWXBT','/shelf=1/slot=11/port=12','EMS_122','','Headend Details','BABGIO','/slot=11/port=12','ON','Huawei','HiM U2000 X86'),
-	(3,'TMCWXBT','/shelf=1/slot=11/port=13','EMS_123','','Headend Details','BACGIO','/slot=11/port=13','ON','Huawei','HiM U2000 X86'),
-	(4,'TMDWXBT','/shelf=1/slot=11/port=14','EMS_124','','Headend Details','BADGIO','/slot=11/port=14','ON','Huawei','HiM U2000 X86'),
-	(5,'CADEBNJ','/shelf=1/slot=11/port=15','EMS_125','','Headend Details','BBAGIO','/slot=11/port=15','ON','Huawei','HiM U2000 X86'),
-	(6,'CBDEBNJ','/shelf=1/slot=11/port=16','EMS_126','','Headend Details','BBBGIO','/slot=11/port=16','ON','Huawei','HiM U2000 X86'),
-	(7,'CCDEBNJ','/shelf=1/slot=11/port=17','EMS_127','','Headend Details','BBCGIO','/slot=11/port=17','ON','Huawei','HiM U2000 X86'),
-	(8,'CDDEBNJ','/shelf=1/slot=11/port=18','EMS_128','','Headend Details','BBDGIO','/slot=11/port=18','ON','Huawei','HiM U2000 X86');
+	VALUES(1,'TMAWXBT','/shelf=1/slot=1/port=11','EMS_3347','','Headend Details','BAAGIO','/slot=1/port=11','ON','Huawei','HiM U2000 X86'),
+	(2,'TMBWXBT','/shelf=1/slot=1/port=12','EMS_3348','','Headend Details','BABGIO','/slot=1/port=12','Off','Huawei','HiM U2000 X86'),
+	(3,'TMCWXBT','/shelf=1/slot=1/port=13','EMS_3349','','Headend Details','BACGIO','/slot=1/port=13','ON','Huawei','HiM U2000 X86'),
+	(4,'TMDWXBT','/shelf=1/slot=1/port=14','EMS_3350','','Headend Details','BADGIO','/slot=1/port=14','Off','Huawei','HiM U2000 X86'),
+	(5,'CADEBNJ','/shelf=1/slot=2/port=15','EMS_3351','','Headend Details','BBAGIO','/slot=2/port=15','ON','Huawei','HiM U2000 X86'),
+	(6,'CBDEBNJ','/shelf=1/slot=2/port=16','EMS_3352','','Headend Details','BBBGIO','/slot=2/port=16','Off','Huawei','HiM U2000 X86'),
+	(7,'CCDEBNJ','/shelf=1/slot=2/port=17','EMS_3353','','Headend Details','BBCGIO','/slot=2/port=17','ON','Huawei','HiM U2000 X86'),
+	(8,'CDDEBNJ','/shelf=1/slot=2/port=18','EMS_3354','','Headend Details','BBDGIO','/slot=2/port=18','Off','Huawei','HiM U2000 X86');
